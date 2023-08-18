@@ -1,4 +1,4 @@
-# **Conage Close Call if Silent**
+# **Vonage Demo: Close Call if Silent using Websockets**
 
 This application shows how to use a Websocket endpoint to detect seconds of silence and end the call.
 

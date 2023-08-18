@@ -23,7 +23,7 @@ const WSAPP = "AppMonitor"
 var wss = new WebSocketServer({ server: server });
 
 //seconds until call is hangup when silent
-SILENCE_TIMEOUT = 2
+SILENCE_TIMEOUT = parseInt(process.env.HANGUP_TIMEOUT)
 
 const vonage =  new Vonage ({
   apiKey: Vonage_API_KEY,
@@ -164,6 +164,7 @@ server.on('request', app)
 
 server.listen(port, () => {
   console.log(`Hang up on Silence Demo ${port}`)
+  console.log(`Go to ${url}/dialer to make a call`)
   console.log(``)
 });
 
